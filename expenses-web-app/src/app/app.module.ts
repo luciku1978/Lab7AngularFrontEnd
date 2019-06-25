@@ -7,12 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from './modules/shared.module';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ExpensesComponent
+    ExpensesComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
