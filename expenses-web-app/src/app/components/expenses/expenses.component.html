@@ -1,0 +1,7 @@
+<div>
+    Page: {{expenses.currentPage}} of {{expenses.numberOfPages}}
+</div>
+
+<ul>
+    <li *ngFor="let e of expenses.entries">{{e.description}}</li>
+</ul> 
