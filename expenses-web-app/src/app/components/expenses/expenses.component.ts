@@ -11,7 +11,7 @@ import { ExpenseService } from 'src/app/services/expenses.service';
 export class ExpensesComponent implements OnInit {
 
     public expenses: any = null;
-    public displayedColumns: string[] = ['Description', 'Type', 'Location', 'Date', 'Currency', 'Sum', 'NumberOfComments'];
+    public displayedColumns: string[] = ['Description', 'Type', 'Location', 'Currency', 'Sum', 'NumberOfComments'];
 
     constructor(private expenseService: ExpenseService) {
         this.getAllExpenses();
