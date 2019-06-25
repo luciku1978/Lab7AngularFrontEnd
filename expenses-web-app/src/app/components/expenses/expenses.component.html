@@ -5,7 +5,9 @@
 <ul>
     <li *ngFor="let e of expenses.entries">{{e.description}}</li>
 </ul>  -->
-
+<div>
+  <p>EXPENSES</p>
+</div>
 <table mat-table [dataSource]="expenses.entries" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.

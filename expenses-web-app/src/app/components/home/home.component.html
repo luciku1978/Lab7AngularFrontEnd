@@ -9,10 +9,14 @@
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-              <button autotest-id="expensesManagement" mat-menu-item (click)="expensesManagement()">
+            <button autotest-id="expensesManagement" mat-menu-item (click)="expensesManagement()">
                   <mat-icon>people</mat-icon>
                   <span>Expenses management</span>
-                </button>
+            </button>
+            <button autotest-id="commentsManagement" mat-menu-item (click)="commentsManagement()">
+              <mat-icon>people</mat-icon>
+              <span>Comments management</span>
+            </button>
             <button autotest-id="userManagement" mat-menu-item (click)="userManagement()">
               <mat-icon>people</mat-icon>
               <span>User management</span>

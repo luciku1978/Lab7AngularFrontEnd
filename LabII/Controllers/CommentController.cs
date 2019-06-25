@@ -39,6 +39,7 @@ namespace Lab6.Controllers
         /// <param name="filter">Opyional, the keyword used to filter comments</param>
         /// <param name="page"></param>
         /// <returns>List of comments</returns>
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         //[Authorize(Roles = "Regular, Admin")] -nu e necesar!
@@ -51,6 +52,7 @@ namespace Lab6.Controllers
             return commentsService.GetAll(filter, page);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         //[Authorize(Roles = "Admin,Regular")]
         public IActionResult Get(int id)
