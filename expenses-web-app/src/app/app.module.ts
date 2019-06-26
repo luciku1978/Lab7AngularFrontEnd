@@ -9,6 +9,7 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { UserRolesComponent } from './components/userroles/userroles.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     HomeComponent,
     ExpensesComponent,
     UsersComponent,
-    CommentsComponent
+    CommentsComponent,
+    UserRolesComponent
   ],
   imports: [
     BrowserModule,
