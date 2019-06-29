@@ -12,9 +12,10 @@ export class CommentsComponent implements OnInit {
 
   public comments: any = null;
 
+  public filteredComments: any = null;
   public displayedColumns: string[] = ['Text', 'ExpenseId', 'Important'];
 
-  constructor(private commentsService: CommentService) {
+  constructor(private commentsService: CommentService, private route: Router ) {
     this.getAllComments();
   }
 
@@ -27,4 +28,20 @@ export class CommentsComponent implements OnInit {
       console.log(c);
     });
   }
+
+  
+  filteredComment(filter: string) {
+    this.commentsService.getAllFilteredComments(filter).subscribe(fc => {
+      this.filteredComments = fc;
+      console.log(fc);
+    })
+
+  }
+
+
+  goBack() {
+    this.route.navigate(['']);
+  }
+
+
 }

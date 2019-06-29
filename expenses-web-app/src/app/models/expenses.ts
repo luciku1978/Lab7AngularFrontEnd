@@ -4,7 +4,7 @@ export class Expense {
     Description: string;
     Type: string;
     Location: string;
-    // Date?: string;
+    Date?: string;
     Currency: string;
     Sum: number;
     NumberOfComments?: number;

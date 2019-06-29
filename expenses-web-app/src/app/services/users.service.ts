@@ -46,4 +46,9 @@ export class UserService {
         return response;
       }));
   }
+  GetUserRoleNameById(id): Observable<any> {
+    const url = `${`https://localhost:44363/api/UserUserRoles`}/${id}`;
+    return this.http.get<any>(url, id);
+  }
+
 }

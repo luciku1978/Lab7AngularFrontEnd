@@ -10,6 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserRolesComponent } from './components/userroles/userroles.component';
+import { MatPaginatorModule } from '@angular/material';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -18,14 +24,20 @@ import { UserRolesComponent } from './components/userroles/userroles.component';
     ExpensesComponent,
     UsersComponent,
     CommentsComponent,
-    UserRolesComponent
+    UserRolesComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

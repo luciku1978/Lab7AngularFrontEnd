@@ -49,6 +49,8 @@ namespace Lab6.Services
         public LoginGetModel Authenticate(string username, string password)
         {
             var user = context.Users
+                //.Include(u => u.UserUserRoles)
+                //.ThenInclude(uur => uur.UserRole)
                 .SingleOrDefault(x => x.Username == username &&
                                  x.Password == ComputeSha256Hash(password));
 
@@ -77,7 +79,9 @@ namespace Lab6.Services
                 Id = user.Id,
                 Email = user.Email,
                 Username = user.Username,
-                Token = tokenHandler.WriteToken(token)
+                Token = tokenHandler.WriteToken(token),
+                //UserRole = user.UserUserRoles.First().UserRole.Name
+                UserRole = userRoleName.ToString()
             };
             return result;
         }

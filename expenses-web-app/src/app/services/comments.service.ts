@@ -26,4 +26,9 @@ export class CommentService {
         return response;
       }));
   }
+
+  getAllFilteredComments(filter): Observable<any>{
+    const url = `${`https://localhost:44363/api/comment?filter=`}${filter}`;
+        return this.http.get<any>(url, filter);
+  }
 }
